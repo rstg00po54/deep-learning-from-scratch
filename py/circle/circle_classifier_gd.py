@@ -155,7 +155,7 @@ def cross_entropy_error(y, t):
 '''
 def 点餐工厂(菜名, 口味):
     def 点单(数量):
-        return f"{菜名} × {数量}，口味：{口味}"
+        return f"{菜名} x {数量}，口味：{口味}"
     return 点单
     
 点辣的宫保鸡丁 = 点餐工厂("宫保鸡丁", "微辣")
@@ -408,7 +408,7 @@ def calc():
     print("distances[:10]:", distances[:10])
     W1, b1, W2, b2, loss_history, W1_history, W2_history = train_neural_network(points, inside_circle, epochs=3000, learning_rate=1e-1)
     # 测试
-    points = np.random.uniform(0, 2, (10, 2))  # 随机生成点坐标
+    points = np.random.uniform(0, 2, (20, 2))  # 随机生成点坐标
     # 圆心 (0, 0)，半径 1
     distances = np.linalg.norm(points, axis=1)  # 计算每个点到原点的距离
     # 判断哪些点在圆内
